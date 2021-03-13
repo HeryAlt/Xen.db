@@ -18,13 +18,21 @@ declare module "xen.db" {
         useWalMode?: boolean;
     }
 
+    /**
+     * Xen.db Util Class
+     */
     export class Util {
+
+        /**
+         * Internal Method Used To Parse Key
+         * @param key Key To Be Parsed
+         */
         public static parseKey(key: string): ParsedKey;
     }
 
     export interface DataSet {
         ID: string;
-        data: any;
+        Data: any;
     }
 
     export interface Options {
@@ -35,6 +43,9 @@ declare module "xen.db" {
     export type Callbackfn<T> = (value: DataSet, index: number, array: DataSet[]) => T;
     export type Reducer = (previousValue: DataSet, currentValue: DataSet, currentIndex: number, array: DataSet[]) => any;
 
+    /**
+     * Xen.db Database Class
+     */
     export class Database {
         databaseFile: string;
         path: string;
@@ -43,7 +54,7 @@ declare module "xen.db" {
         /**
          * The Database Class
          * @param databaseFile Database File Name
-         * @param options DatabaseOptions
+         * @param options Database Options
          */
         constructor(databaseFile?: string, options?: DatabaseOptions);
 
@@ -417,6 +428,9 @@ declare module "xen.db" {
 
     /**
      * Xen.db Versions
+     * ```
+     * console.log(require("xen.db").version);
+     * ```
      */
     export const version: string;
 }
