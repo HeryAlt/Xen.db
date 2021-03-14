@@ -20,6 +20,7 @@ declare module "xen.db" {
 
     /**
      * Xen.db Util Class
+     * Internal Method Used To Parse Key
      */
     export class Util {
 
@@ -44,7 +45,7 @@ declare module "xen.db" {
     export type Reducer = (previousValue: DataSet, currentValue: DataSet, currentIndex: number, array: DataSet[]) => any;
 
     /**
-     * Xen.db Database Class
+     * The Database Class
      */
     export class Database {
         databaseFile: string;

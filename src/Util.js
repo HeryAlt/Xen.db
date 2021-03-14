@@ -1,7 +1,7 @@
 class Util {
 
     /**
-     * Internal method used to parse key
+     * Internal Method Used To Parse Key
      * @param {string} key Key to be parse
      */
     static parseKey(key) {
